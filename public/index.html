@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>迦勒底数据库</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css?t=20180426" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="menus" class="menu menu-right"><!-- 320px -->
+        <ul>
+          <li><a class="fgo-menu-button" href='#servant-query'>
+            <div class="fgo-menu-button" id="btn-servant-query">英灵图鉴</div>
+          </a></li>
+          <li><a class="fgo-menu-button" href='#saintgraph-manage'>
+            <div class="fgo-menu-button" id="btn-saintgraph-manage">灵基一览</div>
+          </a></li>
+          <li><a class="fgo-menu-button" href='#item-manage'>
+            <div class="fgo-menu-button" id="btn-item-manage">道具一览</div>
+          </a></li>
+          <li><a class="fgo-menu-button" href='#summon-emu'>
+            <div class="fgo-menu-button" id="btn-summon-emu">召唤模拟</div>
+          </a></li>
+          <li><a class="fgo-menu-button" href='#appmedia-nga'>
+            <div class="fgo-menu-button" id="btn-appmedia">节奏榜</div>
+          </a></li>
+        </ul>
+      </div>
+      <div id="container">
+        <div id="servant-query">
+          <table border=1 class="servants"><!-- 570px -->
+            <tr class="table-head">
+              <th width=40>ID</th>
+              <th width=80>头像</th>
+              <th width=350>名字</th>
+              <th width=100>职阶</th>
+            </tr>
+            <tr v-for="servant in servants">
+              <td style="text-align: center;">{{servant.id}}</td>
+              <td class="servant-avatar">
+                <a href="#"><img v-bind:width=75 v-bind:height=80 v-bind:src="servant.avatar"></a>
+              </td>
+              <td class="servant-name">
+                {{servant.name_cn}}<br/>
+                {{servant.name_jp}}<br/>
+                {{servant.name_en}}
+              </td>
+              <td class="servant-class">
+                {{servant.class}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/app.js?t=20180426"></script>
+  </body>
+</html>

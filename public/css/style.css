@@ -1,4 +1,16 @@
+body
+{
+    background-image: url(../image/bg.jpg);
+    padding:0;
+    margin:0;
+}
+
 table.servants {
+}
+
+tr.table-head {
+  text-align: center;
+  background-color: #bdd;
 }
 
 td.servant-avatar {
@@ -11,4 +23,33 @@ td.servant-name {
 
 td.servant-class {
   text-align: center;
+}
+
+.menu-right {
+    width: 320px;
+    float: right;
+}
+
+.menu li {
+    list-style: none;
+    margin-top: 24px;
+    margin-left: -20px;
+}
+
+a.fgo-menu-button:link { text-decoration:none; }
+a.fgo-menu-button:active { text-decoration:none; }
+a.fgo-menu-button:hover { text-decoration:none; } 
+a.fgo-menu-button:visited { text-decoration:none; }
+
+div.fgo-menu-button {
+    background-image: url(../image/button.png);
+    background-size: 282px 55px;
+    background-repeat: no-repeat;
+    width: 282px;
+    height: 55px;
+    text-align: center;
+    line-height: 50px;
+    color: #332E28;
+    font-weight: bold;
+    font-size: 1.2em;
 }
