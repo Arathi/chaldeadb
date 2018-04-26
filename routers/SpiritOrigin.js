@@ -8,4 +8,11 @@ router.get('/servant', function(req, resp) {
   });
 });
 
+router.get('/servant/:id', function(req, resp) {
+  var id = req.param('id');
+  models.Servant.findById(id).then(servants => {
+    resp.json(servants);
+  });
+});
+
 module.exports = router;
